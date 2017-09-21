@@ -9,6 +9,6 @@ int main(void) {
   while (answer != 'N' || answer != 'n') {
     scanf("%d%*c", &number);
     prinft("Continue? (y/n)");
-    scanf("%c, &answer);
+    scanf("%c", &answer);
   }
 }
