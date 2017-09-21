@@ -1,5 +1,5 @@
 
-## strncpy(char * destination, const char * source, size_t num);
+## strncpy OR strncpy
 
 ``` C
 int main(void) {
