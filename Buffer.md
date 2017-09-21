@@ -4,11 +4,11 @@
 ``` C
 int main(void) {
   int number;
-  char answer;
+  char c;
   
   while (answer != 'N' || answer != 'n') {
-    scanf("%d%*answer", &number);
+    scanf("%d%*c", &number);
     prinft("Continue? (y/n)");
-    scanf("%answer, &answer);
+    scanf("%c, &answer);
   }
 }
