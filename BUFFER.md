@@ -9,7 +9,7 @@ Lets imagine that we need to create a program that will tell us if the user inpu
 
 int main()
 {
-	char caracter = 0;
+	char caracter;
 
 	do {
 		printf("Give a caracter:\n");
