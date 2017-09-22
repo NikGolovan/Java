@@ -65,12 +65,28 @@ We got our caracter in the buffer. But besides the caracter itself, we also type
 
 Where ``` E ``` is the ENTER key. So, what does see the program in the example above with an A caracter? We give the ``` caracter ``` and press ENTER. It fits our condition of ``` if (caracter >= 65 && caracter <= 90) ``` so it's an upper case caracter, we got it right but program will also see the enter caracter in the buffer ``` E ``` which will cause the algorithm to execute the ``` else ``` condition. 
 
-The possible solution will be to clean the buffer using ``` fflush(name_of_buffer) ``` or we could use one technique. 
+The possible solution will be to clean the buffer using ``` fflush(name_of_buffer) ``` or we could use one technique. All we have to do is to change this part of code: 
+
+``` C
+printf("Give a caracter:\n");
+scanf("%c", &caracter);
+```
+
+to this:
 
 ``` C
 printf("Give a caracter:\n");
 scanf("%c%*c", &caracter);
 ```
+Basically, we added the ``` %*c ``` to the ``` scanf ``` which means that we dont want to keep next typed in caracter in the buffer. So with this code the buffer will ignore next record with value of a caracter. It will look like this even after pressing enter: 
+
+```
+---+---+---+---+---+
+%c |   |   |   |   |
+---+---+---+---+---+
+```
+
+So, that's it. And modified code will run as it should :
 
 ``` C
 int main()
@@ -92,4 +108,12 @@ int main()
 	
 	return 0;
 }
+```
+
+Output: 
+
+```
+A
+This is an upper case caracter
+Give a caracter:
 ```
