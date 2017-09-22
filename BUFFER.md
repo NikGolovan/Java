@@ -1,5 +1,7 @@
 ## Buffer
 
+Lets imagine that we need to create a program that will tell us if the user input was an upper or a lower case by using the following code: 
+
 ``` C
 #include <stdio.h>
 
@@ -25,6 +27,9 @@ int main()
 	return 0;
 }
 ```
+
+The break point of the loop is when user presses the ESC button, which defined as a ``` C #define ESC 27 ``` using it's ```ASCII``` code. 
+
 ``` C
 printf("Give a caracter:\n");
 scanf("%c%*c", &caracter);
