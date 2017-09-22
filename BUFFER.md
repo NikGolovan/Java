@@ -29,7 +29,7 @@ int main()
 ```
 
 The break point of the loop is when user presses the ESC button, which defined as a ``` #define ESC 27 ``` using it's ```ASCII``` code. 
-The problem is, if we execute current code, will get the next output: 
+The problem is, if we execute current code, we will get the next output: 
 
 ``` 
 A
@@ -39,6 +39,13 @@ Unknown caracter
 Give a caracter:
 ```
 So, as we can see, the ``` else ``` statement in our ``` if ``` loop was executed as well. Why did it happen? 
+The problem hides behind the buffer. The thing is that, the buffer holds all actions that has been sent from the keyboard. Imagine this:
+
+```
+---+---+---+---+---+
+%c |   |   |   |   |
+---+---+---+---+---+
+```
 
 ``` C
 printf("Give a caracter:\n");
