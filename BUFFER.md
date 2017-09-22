@@ -28,7 +28,17 @@ int main()
 }
 ```
 
-The break point of the loop is when user presses the ESC button, which defined as a ``` C #define ESC 27 ``` using it's ```ASCII``` code. 
+The break point of the loop is when user presses the ESC button, which defined as a ``` #define ESC 27 ``` using it's ```ASCII``` code. 
+The problem is, if we execute current code, will get the next output: 
+
+``` 
+A
+This is an upper case caracter
+Give a caracter:
+Unknown caracter
+Give a caracter:
+```
+So, as we can see, the ``` else ``` statement in our ``` if ``` loop was executed as well. Why did it happen? 
 
 ``` C
 printf("Give a caracter:\n");
