@@ -63,7 +63,7 @@ We got our caracter in the buffer. But besides the caracter itself, we also type
 ---+---+---+---+---+
 ```
 
-Where ``` E ``` is the ENTER key. So, what does see the program in the example above with an A caracter? We give the ``` caracter ``` and press ENTER. It fits our condition of ``` if (caracter >= 65 && caracter <= 90) ``` so it's an upper case caracter, we got it right but program will also see the ENTER caracter in the buffer ``` E ``` which will cause the algorithm to execute the ``` else ``` condition. 
+Where ``` E ``` is the ENTER key. So, what does see the program in the example above with an A caracter? We give the ``` caracter ``` and press ENTER. It fits our condition of ``` if (caracter >= 65 && caracter <= 90) ``` so it's an upper case caracter, we got it right but program will also read the ENTER caracter in the buffer ``` E ``` which will cause the algorithm to execute the ``` else ``` condition. 
 
 The possible solution will be to clean the buffer using ``` fflush(name_of_buffer) ``` or we could use one technique. All we have to do is to change this part of code: 
 
