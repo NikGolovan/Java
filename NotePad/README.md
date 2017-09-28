@@ -1,4 +1,6 @@
-## heading
+## MyNotes (NotePad)
+
+This is a special NotePad that allows to save information by using tag names. 
 
 ![alt text](https://github.com/NikGolovan/Java/blob/master/NotePad/Screenshots/Screenshot1.png)
 
